@@ -17,10 +17,10 @@ body{overflow-x:hidden}
 .script{font-family:'Great Vibes',cursive;font-weight:400}
 .cap{font-family:'Cinzel',serif;letter-spacing:.3em;text-transform:uppercase}
 .center{text-align:center;position:relative;z-index:3;padding:0 22px}
-/* roses */
 .rose{position:absolute;border-radius:50%;z-index:2;background:radial-gradient(circle at 35% 30%,#fffaf0,#f7e2b0 40%,#d9b068 75%,#9c7330);box-shadow:inset 0 0 0 3px rgba(255,255,255,.25),inset 0 0 0 9px rgba(156,115,48,.18),inset 0 0 0 15px rgba(255,250,235,.22),0 4px 14px rgba(0,0,0,.4)}
 .leaf{position:absolute;width:46px;height:20px;border-radius:0 100% 0 100%;background:linear-gradient(135deg,#6b6a2c,#3b3a14);z-index:1;opacity:.8}
-/* page1 */
+
+/* PAGE 1 */
 #p1{background:radial-gradient(ellipse at 50% 30%,#4a2e10 0,#22130a 45%,#0d0703 100%)}
 #p1:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 100%,rgba(246,213,138,.35),transparent 45%)}
 .lights{position:absolute;top:0;left:0;right:0;height:210px;z-index:2;pointer-events:none}
@@ -38,7 +38,8 @@ body{overflow-x:hidden}
 .lantern{position:absolute;bottom:40px;width:52px;height:86px;border:3px solid #8a6424;border-radius:8px 8px 4px 4px;background:radial-gradient(circle at 50% 70%,#fff0b8,#e0a640 50%,#5a3a10);box-shadow:0 0 30px 8px rgba(255,190,80,.6);z-index:2}
 .arrow{position:absolute;bottom:12px;left:50%;color:var(--gold);animation:bob 1.6s infinite;z-index:3}
 @keyframes bob{50%{transform:translateY(6px)}}
-/* page2 */
+
+/* PAGE 2 */
 #p2{background:radial-gradient(ellipse at 50% 0,#fff6e2,#f3dfb6 60%,#e6c98c);color:var(--ink);padding:0 0 30px;min-height:100vh;min-height:100svh}
 #p2 .center{width:100%;max-width:1120px;margin:0 auto;padding:clamp(42px,7vh,76px) clamp(18px,4vw,54px) 42px}
 #p2 h2{font-size:clamp(38px,5vw,58px);color:#6b4a1c;font-weight:400;margin:8px 0 18px}
@@ -54,10 +55,10 @@ body{overflow-x:hidden}
 .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 .card{background:rgba(255,250,236,.8);border:1px solid #e0c58e;border-radius:8px;padding:14px 8px;font-size:16px;line-height:1.3;overflow-wrap:anywhere}
 .card b{display:block;font-size:22px;margin-bottom:2px}
-.evt{width:100%;max-width:760px;aspect-ratio:16/7;margin:18px auto;border-radius:10px;background-size:cover;background-position:center;background-color:#d9b068;display:grid;place-items:center;font-size:40px;border:3px solid #fff;box-shadow:0 6px 18px rgba(80,50,10,.3)}
 .btn.dark{border-color:#b98a3c;color:#5a3a14;background:rgba(255,250,236,.7);font-size:18px;padding:11px 28px;animation:none;box-shadow:0 2px 10px rgba(150,100,30,.3)}
 .foot{margin-top:24px;font-size:23px;font-style:italic;color:#6b4a1c}
-/* page3 */
+
+/* PAGE 3 */
 #p3{background:radial-gradient(ellipse at 50% 20%,#3d2610,#170d05 60%,#0a0503);min-height:100vh;min-height:100svh;padding:28px 18px 60px}
 #p3>.center{width:100%;max-width:560px;margin:0 auto;padding:clamp(18px,5vh,55px) 22px 35px}
 .lock{width:76px;height:84px;margin:26px auto 4px;position:relative}
@@ -73,48 +74,122 @@ body{overflow-x:hidden}
 #dash .field{border-radius:12px;padding:11px 14px;margin:4px 0;font-size:17px}
 #dash .btn{font-size:18px;padding:12px 30px;margin-top:14px}
 .thumb{height:70px;width:100px;background-size:cover;border-radius:6px;margin:6px 0;background-color:#3a2410}
-/* full-screen responsive layout */
+
+/* RESPONSIVE */
 @media(min-width:700px){
-  #p1 .center{max-width:1120px;margin:0 auto}
-  #p1 .names{font-size:clamp(76px,8vw,112px)}
-  #p1 .lantern{bottom:54px}
-  #p2 .row{min-height:250px}
-  #p2 .ph{max-height:320px}
-  #p3 #login{padding:10px 34px 25px}
+ #p1 .center{max-width:1120px;margin:0 auto}
+ #p1 .names{font-size:clamp(76px,8vw,112px)}
+ #p1 .lantern{bottom:54px}
+ #p2 .row{min-height:250px}
+ #p2 .ph{max-height:320px}
+ #p3 #login{padding:10px 34px 25px}
 }
 @media(max-width:600px){
-  #p1 .center{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;min-height:100svh;padding:76px 20px 112px!important}
-  #p1 .names{font-size:clamp(48px,15vw,72px);overflow-wrap:anywhere}
-  #p1 .cap{letter-spacing:.2em}
-  #p1 .lantern{width:38px;height:66px;bottom:24px}
-  #p1 .lantern[style*="right"]{height:58px}
-  #p2 .center{padding:42px 16px 32px}
-  #p2 .row{gap:14px;margin:18px auto 24px;align-items:center}
-  .msg{font-size:17px}
-  .polaroid{flex:0 0 42%;min-height:0;padding:5px 5px 16px}
-  .tabs{gap:8px}
-  .tab{font-size:16px;padding:12px 5px}
-  .cards{gap:6px}
-  .card{font-size:14px;padding:11px 4px}
-  .card b{font-size:18px}
-  .evt{aspect-ratio:16/10}
-  #p3{padding:14px 12px 40px}
-  #p3>.center{padding:22px 10px}
+ #p1 .center{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;min-height:100svh;padding:76px 20px 112px!important}
+ #p1 .names{font-size:clamp(48px,15vw,72px);overflow-wrap:anywhere}
+ #p1 .cap{letter-spacing:.2em}
+ #p1 .lantern{width:38px;height:66px;bottom:24px}
+ #p1 .lantern[style*="right"]{height:58px}
+ #p2 .center{padding:42px 16px 32px}
+ #p2 .row{gap:14px;margin:18px auto 24px;align-items:center}
+ .msg{font-size:17px}
+ .polaroid{flex:0 0 42%;min-height:0;padding:5px 5px 16px}
+ .tabs{gap:8px}
+ .tab{font-size:16px;padding:12px 5px}
+ .cards{gap:6px}
+ .card{font-size:14px;padding:11px 4px}
+ .card b{font-size:18px}
+ #p3{padding:14px 12px 40px}
+ #p3>.center{padding:22px 10px}
 }
 @media(max-width:380px){
-  #p1 .names{font-size:46px}
-  #p1 .center{padding-left:14px!important;padding-right:14px!important}
-  #p2 .row{flex-direction:column}
-  .polaroid{width:58%;max-width:230px;flex:auto}
-  .cards{grid-template-columns:1fr}
-  .card{text-align:center}
-  .tabs{flex-direction:column}
-  .tab{width:100%}
-  #p2 h2{font-size:36px}
+ #p1 .names{font-size:46px}
+ #p1 .center{padding-left:14px!important;padding-right:14px!important}
+ #p2 .row{flex-direction:column}
+ .polaroid{width:58%;max-width:230px;flex:auto}
+ .cards{grid-template-columns:1fr}
+ .card{text-align:center}
+ .tabs{flex-direction:column}
+ .tab{width:100%}
+ #p2 h2{font-size:36px}
 }
 @media(prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}
+ *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}
 }
+
+/* ===== LUXURY WEDDING VISUAL UPGRADE ===== */
+html,body{background:#100803}
+.pg{isolation:isolate}
+#p1,#p3{
+ background:
+ radial-gradient(ellipse at 50% 38%,rgba(224,157,65,.30),transparent 35%),
+ radial-gradient(ellipse at 50% 100%,rgba(255,190,88,.16),transparent 38%),
+ linear-gradient(135deg,#1a0f06 0%,#39200d 38%,#170b04 72%,#090503 100%);
+}
+#p1:after,#p3:after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse at center,transparent 42%,rgba(0,0,0,.55) 100%)}
+#p1 .center,#p3>.center,#dash{z-index:4}
+#p1 .center{padding-top:clamp(105px,14vh,165px)!important;padding-bottom:145px}
+#p1 .names{color:#ffe0a0;text-shadow:0 0 8px #f7bd62,0 0 28px rgba(255,174,62,.75),0 3px 4px #1b0d03}
+#p1 .rule{color:#f5c879;text-shadow:0 0 8px rgba(255,190,85,.65)}
+#p1 .lights{height:245px;z-index:3;overflow:hidden}
+#p1 .lights:before{content:"";position:absolute;left:-5%;right:-5%;top:15px;height:170px;border-top:2px solid rgba(255,206,126,.62);border-radius:0 0 50% 50%;filter:drop-shadow(0 0 7px #ffbd5a)}
+#p1 .lights i{width:8px;height:8px;background:#fff4cf;box-shadow:0 0 7px 3px #ffc35c,0 0 22px 8px rgba(255,177,65,.6);animation:bulbTwinkle 2.8s ease-in-out infinite}
+@keyframes bulbTwinkle{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.48;transform:scale(.72)}}
+#p2{
+ background:
+ radial-gradient(ellipse at 50% 48%,rgba(255,255,255,.42),transparent 54%),
+ radial-gradient(ellipse at 0 50%,rgba(193,132,54,.18),transparent 34%),
+ radial-gradient(ellipse at 100% 50%,rgba(193,132,54,.18),transparent 34%),
+ linear-gradient(135deg,#f5dfb8 0%,#fff3dc 38%,#f2d7a9 100%);
+}
+#p2:before{content:"";position:absolute;inset:0;pointer-events:none;z-index:0;opacity:.22;background-image:radial-gradient(#9b6b35 .55px,transparent .7px);background-size:7px 7px;mask-image:linear-gradient(90deg,#000,transparent 25%,transparent 75%,#000)}
+#p2:after{content:"";position:absolute;inset:0;pointer-events:none;z-index:0;box-shadow:inset 0 0 75px rgba(157,100,35,.25)}
+#p2 .center{z-index:3;position:relative;padding-bottom:210px!important}
+#p2 h2{color:#704315;text-shadow:0 2px 8px rgba(255,255,255,.8)}
+#p2 .card{background:linear-gradient(145deg,rgba(255,252,241,.94),rgba(244,220,181,.88));border:1px solid #d6ad6c;box-shadow:0 7px 18px rgba(107,68,25,.12),inset 0 1px 0 #fff}
+#p2 .tab{box-shadow:0 5px 14px rgba(90,54,17,.16)}
+#p2 .tab.on{background:linear-gradient(135deg,#ffe4a5,#d99b3c);box-shadow:0 0 20px rgba(222,155,53,.55)}
+#p3 .rings{margin-top:8px}
+#p3 .names{color:#ffe0a0;text-shadow:0 0 10px #f4b84f,0 0 28px rgba(255,174,62,.6)}
+#p3 .lock:before{border-color:#ffd27b;filter:drop-shadow(0 0 8px #ffbf52) drop-shadow(0 0 18px #e99b2f)}
+#p3 .lock:after{background-image:radial-gradient(circle at 50% 38%,#4a2d08 6px,transparent 7px),linear-gradient(145deg,#fff0b8,#d9942c);box-shadow:0 0 22px #f3b54b,0 0 45px rgba(255,170,55,.5)}
+.field{background:linear-gradient(120deg,rgba(19,9,3,.86),rgba(58,32,11,.78));border-color:rgba(236,178,83,.8);box-shadow:inset 0 1px 8px rgba(0,0,0,.35),0 0 12px rgba(218,157,63,.08)}
+.btn{background:linear-gradient(135deg,rgba(72,43,14,.9),rgba(23,12,4,.9));border-color:#ffd17b;color:#ffe6ae;box-shadow:0 0 18px rgba(255,181,67,.55),inset 0 0 14px rgba(255,207,123,.2)}
+.lantern{width:66px;height:112px;bottom:48px;border:3px solid #9c6c25;border-radius:9px 9px 5px 5px;background:linear-gradient(90deg,rgba(73,39,10,.94),rgba(255,207,112,.26) 18%,rgba(255,225,160,.14) 50%,rgba(84,47,12,.94));box-shadow:0 0 12px #d99a3c,0 0 36px 12px rgba(255,175,66,.45),inset 0 0 20px rgba(255,223,160,.35)}
+.lantern:before{content:"";position:absolute;left:8px;right:8px;top:10px;bottom:9px;border:1px solid rgba(255,220,151,.7);border-radius:4px;background:radial-gradient(ellipse at 50% 80%,#fff6c9 0,#ffc65f 12%,rgba(238,153,43,.45) 38%,transparent 72%)}
+.lantern:after{content:"";position:absolute;width:24px;height:35px;left:50%;bottom:12px;transform:translateX(-50%);border-radius:50% 50% 35% 35%;background:radial-gradient(ellipse at 50% 70%,#fffce0 0 15%,#ffd16b 35%,rgba(240,143,36,.35) 70%,transparent);filter:drop-shadow(0 0 12px #ffbd55)}
+.floral-layer{position:absolute;inset:0;z-index:2;pointer-events:none;overflow:hidden}
+.floral-cluster{position:absolute;width:clamp(145px,24vw,290px);height:auto;filter:drop-shadow(0 8px 12px rgba(0,0,0,.34));transform-origin:center;animation:flowerBloom 2.8s cubic-bezier(.2,.8,.2,1) both}
+@keyframes flowerBloom{from{opacity:0;transform:scale(.72)}to{opacity:1;transform:scale(1)}}
+#p1 .floral-cluster,#p3 .floral-cluster{filter:drop-shadow(0 8px 14px rgba(0,0,0,.65)) drop-shadow(0 0 12px rgba(255,211,150,.12))}
+.floral-layer .tl{top:-12px;left:-18px}
+.floral-layer .tr{top:-12px;right:-18px;transform:scaleX(-1);animation-name:flowerBloomFlip}
+.floral-layer .bl{bottom:-18px;left:-18px;transform:scaleY(-1)}
+.floral-layer .br{bottom:-18px;right:-18px;transform:scale(-1);animation-name:flowerBloomFlip}
+@keyframes flowerBloomFlip{from{opacity:0}to{opacity:1}}
+#p1 .floral-layer .tl,#p1 .floral-layer .bl{width:clamp(155px,22vw,270px)}
+#p1 .floral-layer .tr,#p1 .floral-layer .br{width:clamp(155px,22vw,270px)}
+#p2 .floral-layer .tl,#p2 .floral-layer .tr{width:clamp(125px,18vw,220px)}
+#p2 .floral-layer .bl,#p2 .floral-layer .br{width:clamp(165px,24vw,290px)}
+#p3 .floral-layer .tl,#p3 .floral-layer .tr,#p3 .floral-layer .bl,#p3 .floral-layer .br{width:clamp(125px,19vw,220px)}
+.arch-scene{position:relative;max-width:900px;height:clamp(145px,23vw,235px);margin:22px auto 0;overflow:hidden;border-radius:12px 12px 0 0;background:linear-gradient(180deg,rgba(255,240,210,0),rgba(126,76,27,.12) 55%,rgba(94,55,20,.25))}
+.arch-scene:before{content:"";position:absolute;left:50%;bottom:-52px;transform:translateX(-50%);width:clamp(150px,28vw,270px);height:clamp(150px,28vw,270px);border:10px solid #b9853e;border-bottom:0;border-radius:150px 150px 0 0;box-shadow:0 0 14px #f5cb79,0 0 32px rgba(226,157,59,.5),inset 0 0 20px rgba(255,255,255,.45)}
+.arch-scene:after{content:"";position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:100%;height:55%;background:radial-gradient(ellipse at 50% 100%,rgba(255,255,255,.8),rgba(237,187,104,.32) 32%,transparent 72%)}
+.arch-lights{position:absolute;left:8%;right:8%;bottom:22px;height:70px;border-top:2px solid rgba(255,230,166,.8);border-radius:50%;filter:drop-shadow(0 0 8px #ffbf59)}
+.arch-lights:before{content:"";position:absolute;left:0;right:0;top:-4px;height:8px;background:radial-gradient(circle,#fff8d5 0 2px,rgba(255,192,79,.8) 3px,transparent 7px);background-size:28px 12px;animation:twinkleArch 2s infinite alternate}
+@keyframes twinkleArch{to{opacity:.45}}
+.arch-scene .arch-glow{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:45%;height:80%;background:radial-gradient(ellipse,rgba(255,235,179,.75),transparent 70%);filter:blur(8px)}
+.gold-dust{position:absolute;inset:0;pointer-events:none;z-index:1;overflow:hidden}
+.gold-dust i{position:absolute;width:2px;height:2px;border-radius:50%;background:#ffd987;box-shadow:0 0 6px 2px rgba(255,185,76,.6);opacity:.55;animation:dustFloat 9s ease-in-out infinite}
+@keyframes dustFloat{0%,100%{transform:translate3d(0,0,0);opacity:.2}50%{transform:translate3d(8px,-28px,0);opacity:.8}}
+@media(max-width:600px){
+ #p1 .center{padding-top:100px!important;padding-bottom:120px!important}
+ .lantern{width:42px;height:78px;bottom:25px}
+ #p2 .center{padding-bottom:175px!important}
+ .arch-scene{height:150px;margin-left:-6px;margin-right:-6px}
+ #p3 .floral-cluster{width:125px}
+}
+@media(prefers-reduced-motion:reduce){.floral-cluster,.gold-dust i,#p1 .lights i{animation:none!important}}
 </style>
 </head>
 <body>
@@ -122,6 +197,7 @@ body{overflow-x:hidden}
 <!-- PAGE 1 -->
 <section class="pg" id="p1">
   <div class="lights" id="lights"></div>
+  <div class="gold-dust" aria-hidden="true"></div>
   <div class="center" style="padding-top:150px;min-height:100vh">
     <div class="rings"></div>
     <div class="rule cap" style="font-size:13px;margin-top:22px">Together Forever</div>
@@ -141,6 +217,7 @@ body{overflow-x:hidden}
 
 <!-- PAGE 2 -->
 <section class="pg" id="p2">
+  <div class="gold-dust" aria-hidden="true"></div>
   <div class="center">
     <div class="rule" style="color:#b98a3c">♡</div>
     <h2 class="script">Our Wedding Celebration</h2>
@@ -158,9 +235,9 @@ body{overflow-x:hidden}
         <div class="card">🕕<b></b>Time<br><span id="d-time"></span></div>
         <div class="card">📍<b></b>Venue<br><span id="d-venue"></span></div>
       </div>
-      <div class="evt" id="d-photo"></div>
       <a class="btn dark" id="d-map" target="_blank" rel="noopener">📍 Get Directions</a>
     </div>
+    <div class="arch-scene" aria-label="Decorative illuminated wedding arch"><div class="arch-glow"></div><div class="arch-lights"></div></div>
     <div class="foot">Let's celebrate love together! ♡</div>
   </div>
   <div class="roses" data-roses="p2"></div>
@@ -168,6 +245,7 @@ body{overflow-x:hidden}
 
 <!-- PAGE 3: private admin route -->
 <section class="pg" id="p3">
+  <div class="gold-dust" aria-hidden="true"></div>
   <div class="center">
     <div class="rings"></div>
     <div id="login">
@@ -207,30 +285,71 @@ const get = (o,p) => p.split(".").reduce((a,k)=>a&&a[k],o);
 const set = (o,p,v) => { const a=p.split("."),l=a.pop(); a.reduce((x,k)=>x[k]=x[k]||{},o)[l]=v; };
 const merge = (a,b) => { for(const k in b){ if(b[k]&&typeof b[k]==="object") merge(a[k]=a[k]||{},b[k]); else if(b[k]!==""&&b[k]!=null) a[k]=b[k]; } return a; };
 
-/* ===== decorations ===== */
+/* ===== SVG floral artwork, fairy lights and floating gold dust ===== */
 (function deco(){
-  const L=$("#lights");
-  for(let s=0;s<2;s++) for(let i=0;i<22;i++){
-    const x=i/21, y=(s?30:8)+Math.sin(x*Math.PI*3+s)*14+x*(s?50:90);
-    const d=document.createElement("i"); d.style.cssText=`left:${x*100}%;top:${y}px;animation-delay:${(i*.37)%2.4}s`; L.appendChild(d);
+  const lights=$("#lights");
+  for(let i=0;i<27;i++){
+    const x=i/26, y=18+Math.sin(x*Math.PI*2)*34+x*55;
+    const bulb=document.createElement("i");
+    bulb.style.cssText=`left:${x*100}%;top:${y}px;animation-delay:${(i*.29)%2.8}s`;
+    lights.appendChild(bulb);
   }
-  const spots={
-    p1:[[-30,-20,110],[40,-40,80],[-35,90,90],[-20,230,70],[-30,300,80],[-40,520,100],[-20,640,90],[-10,-1,110,'b'],[330,-30,90,'r'],[340,160,70,'r'],[360,330,80,'r'],[350,540,100,'r']],
-    p2:[[-30,-20,110],[50,-30,80],[-35,100,70],[330,-30,90,'r'],[350,80,60,'r'],[-30,'b',110],['r','b',120]],
-    p3:[[-30,-20,90],[55,-35,70],['r','b',120],[300,'b',90]]
-  };
+
+  const flowerSVG=`
+  <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+   <defs>
+    <radialGradient id="petal" cx="35%" cy="28%"><stop stop-color="#fffef8"/><stop offset=".48" stop-color="#fff0d9"/><stop offset=".82" stop-color="#dfc39c"/><stop offset="1" stop-color="#a77d50"/></radialGradient>
+    <radialGradient id="inner" cx="35%" cy="25%"><stop stop-color="#fffdf3"/><stop offset=".65" stop-color="#f3dfc0"/><stop offset="1" stop-color="#c79a68"/></radialGradient>
+    <linearGradient id="leafg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#78805a"/><stop offset=".5" stop-color="#35452e"/><stop offset="1" stop-color="#17291d"/></linearGradient>
+    <filter id="shadow"><feGaussianBlur stdDeviation="3"/></filter>
+   </defs>
+   <g opacity=".45" fill="#20180e" filter="url(#shadow)"><ellipse cx="145" cy="265" rx="120" ry="18"/></g>
+   <g fill="url(#leafg)" stroke="#263b28" stroke-width="1.5">
+    <path d="M18 250 Q-8 180 52 160 Q64 214 18 250Z"/><path d="M34 260 Q48 180 112 184 Q100 240 34 260Z"/>
+    <path d="M75 274 Q90 205 155 214 Q139 267 75 274Z"/><path d="M185 267 Q205 188 270 190 Q252 248 185 267Z"/>
+    <path d="M230 244 Q235 170 294 153 Q292 215 230 244Z"/><path d="M116 238 Q100 165 150 145 Q174 196 116 238Z"/>
+   </g>
+   <g stroke="#e9d9bd" stroke-width="1" fill="none" opacity=".55"><path d="M18 250Q22 205 52 160M34 260Q62 212 112 184M75 274Q104 231 155 214M185 267Q225 220 270 190M230 244Q260 194 294 153"/></g>
+   <g transform="translate(78 115)">
+    <ellipse rx="34" ry="48" fill="url(#petal)" transform="rotate(0) translate(0 -22)"/>
+    <ellipse rx="34" ry="48" fill="url(#petal)" transform="rotate(60) translate(0 -22)"/>
+    <ellipse rx="34" ry="48" fill="url(#petal)" transform="rotate(120) translate(0 -22)"/>
+    <ellipse rx="34" ry="48" fill="url(#petal)" transform="rotate(180) translate(0 -22)"/>
+    <ellipse rx="34" ry="48" fill="url(#petal)" transform="rotate(240) translate(0 -22)"/>
+    <ellipse rx="34" ry="48" fill="url(#petal)" transform="rotate(300) translate(0 -22)"/>
+    <g fill="url(#inner)"><ellipse rx="23" ry="32" transform="rotate(0) translate(0 -13)"/><ellipse rx="23" ry="32" transform="rotate(90) translate(0 -13)"/><ellipse rx="23" ry="32" transform="rotate(180) translate(0 -13)"/><ellipse rx="23" ry="32" transform="rotate(270) translate(0 -13)"/></g>
+    <path d="M-13 3Q-21-20 0-27Q20-20 13 3Q7 20-5 17Q-19 15-13 3Z" fill="#fff9eb" stroke="#d7b88d" stroke-width="2"/>
+    <path d="M-5-8Q-12-20 2-21Q14-13 4-4Q-2 2-5-8Z" fill="#ead3ae"/>
+   </g>
+   <g transform="translate(204 174) scale(.76)">
+    <ellipse rx="34" ry="48" fill="url(#petal)" transform="rotate(0) translate(0 -22)"/><ellipse rx="34" ry="48" fill="url(#petal)" transform="rotate(60) translate(0 -22)"/><ellipse rx="34" ry="48" fill="url(#petal)" transform="rotate(120) translate(0 -22)"/><ellipse rx="34" ry="48" fill="url(#petal)" transform="rotate(180) translate(0 -22)"/><ellipse rx="34" ry="48" fill="url(#petal)" transform="rotate(240) translate(0 -22)"/><ellipse rx="34" ry="48" fill="url(#petal)" transform="rotate(300) translate(0 -22)"/>
+    <g fill="url(#inner)"><ellipse rx="23" ry="32" transform="rotate(0) translate(0 -13)"/><ellipse rx="23" ry="32" transform="rotate(90) translate(0 -13)"/><ellipse rx="23" ry="32" transform="rotate(180) translate(0 -13)"/><ellipse rx="23" ry="32" transform="rotate(270) translate(0 -13)"/></g><circle r="12" fill="#f7e8cf"/>
+   </g>
+   <g transform="translate(145 52) scale(.42)" fill="url(#petal)"><ellipse rx="30" ry="43" transform="rotate(0) translate(0 -20)"/><ellipse rx="30" ry="43" transform="rotate(72) translate(0 -20)"/><ellipse rx="30" ry="43" transform="rotate(144) translate(0 -20)"/><ellipse rx="30" ry="43" transform="rotate(216) translate(0 -20)"/><ellipse rx="30" ry="43" transform="rotate(288) translate(0 -20)"/><circle r="13" fill="#f5e2c5"/></g>
+   <g fill="#fff8e8" stroke="#d9c29f" stroke-width="1.5"><circle cx="42" cy="115" r="5"/><circle cx="54" cy="91" r="4"/><circle cx="25" cy="137" r="4"/><circle cx="258" cy="104" r="5"/><circle cx="273" cy="126" r="4"/><circle cx="246" cy="84" r="3"/><circle cx="165" cy="245" r="4"/><circle cx="180" cy="256" r="3"/></g>
+   <g stroke="#f8edda" stroke-width="2" fill="none" opacity=".9"><path d="M42 115l-12-23m24-1l-8-17m-21 63l-13 12m238-45l15-20m0 42l14 11"/></g>
+  </svg>`;
+
   $$("[data-roses]").forEach(box=>{
-    const pg=box.closest(".pg");
-    (spots[box.dataset.roses]||[]).forEach(([x,y,s])=>{
-      const r=document.createElement("div"); r.className="rose";
-      r.style.width=r.style.height=s+"px";
-      r.style[x==="r"?"right":"left"]=(x==="r"?-30:x)+"px";
-      r.style[y==="b"?"bottom":"top"]=(y==="b"?-30:y)+"px";
-      pg.appendChild(r);
-      const l=document.createElement("div"); l.className="leaf";
-      l.style.cssText=`${x==="r"?"right":"left"}:${(x==="r"?0:+x||0)+s*.6}px;${y==="b"?"bottom":"top"}:${(y==="b"?0:+y||0)+s*.7}px;transform:rotate(${(s*7)%90}deg)`;
-      pg.appendChild(l);
+    box.classList.add("floral-layer");
+    ["tl","tr","bl","br"].forEach((pos,index)=>{
+      const wrap=document.createElement("div");
+      wrap.className=`floral-cluster ${pos}`;
+      wrap.innerHTML=flowerSVG;
+      wrap.style.animationDelay=(index*.22)+"s";
+      box.appendChild(wrap);
     });
+  });
+
+  $$(".gold-dust").forEach(layer=>{
+    for(let i=0;i<42;i++){
+      const dot=document.createElement("i");
+      dot.style.left=(Math.random()*100)+"%";
+      dot.style.top=(Math.random()*100)+"%";
+      dot.style.animationDelay=(Math.random()*9)+"s";
+      dot.style.animationDuration=(7+Math.random()*7)+"s";
+      layer.appendChild(dot);
+    }
   });
 })();
 
@@ -245,13 +364,16 @@ function showEv(){
   $$(".tab").forEach(t=>t.classList.toggle("on",t.dataset.ev===ev));
   d.style.opacity=0;
   setTimeout(()=>{
-    $("#d-date").textContent=e.date||""; $("#d-time").textContent=e.time||""; $("#d-venue").textContent=e.venue||"";
-    const p=$("#d-photo"); p.style.backgroundImage=e.photo?`url("${e.photo}")`:""; p.textContent=e.photo?"":(ev==="wedding"?"💍":"✝");
-    const m=$("#d-map"); m.style.display=e.maps?"inline-block":"none"; if(e.maps) m.href=e.maps;
+    $("#d-date").textContent=e.date||"";
+    $("#d-time").textContent=e.time||"";
+    $("#d-venue").textContent=e.venue||"";
+    const m=$("#d-map");
+    m.style.display=e.maps?"inline-block":"none";
+    if(e.maps) m.href=e.maps;
     d.style.opacity=1;
   },200);
 }
-$$(".tab").forEach(t=>t.onclick=()=>{ ev=t.dataset.ev; showEv(); });  // swaps content only, no navigation
+$$(".tab").forEach(t=>t.onclick=()=>{ ev=t.dataset.ev; showEv(); });
 
 async function load(){
   if(sb){ try{ const {data}=await sb.from("invitation").select("data").eq("id",1).maybeSingle(); if(data&&data.data) merge(C,data.data); }catch(e){} }
@@ -264,7 +386,8 @@ $("#open").onclick=()=>{ location.hash="celebration"; };
 /* ===== routing (no public link to #admin) ===== */
 function route(){
   const h=location.hash.replace("#",""), id=h==="celebration"?"p2":h==="admin"?"p3":"p1";
-  $$(".pg").forEach(p=>p.classList.toggle("on",p.id===id)); window.scrollTo(0,0);
+  $$(".pg").forEach(p=>p.classList.toggle("on",p.id===id));
+  window.scrollTo(0,0);
   if(id==="p3") checkSession();
 }
 addEventListener("hashchange",route);
@@ -279,48 +402,67 @@ const FIELDS=[
 ];
 async function isAdmin(){
   if(!sb) return false;
-  const {data:{session}}=await sb.auth.getSession(); if(!session) return false;
+  const {data:{session}}=await sb.auth.getSession();
+  if(!session) return false;
   const {data}=await sb.from("admins").select("user_id").eq("user_id",session.user.id).maybeSingle();
-  if(!data){ await sb.auth.signOut(); return false; } return true;
+  if(!data){ await sb.auth.signOut(); return false; }
+  return true;
 }
 async function checkSession(){
-  const ok=await isAdmin(); $("#login").hidden=ok; $("#dash").hidden=!ok; if(ok) buildDash();
+  const ok=await isAdmin();
+  $("#login").hidden=ok;
+  $("#dash").hidden=!ok;
+  if(ok) buildDash();
 }
 $("#go").onclick=async()=>{
-  const err=$("#err"); err.textContent="";
+  const err=$("#err");
+  err.textContent="";
   if(!sb){ err.textContent="Supabase is not connected yet. Add your URL and key in index.html."; return; }
   const {error}=await sb.auth.signInWithPassword({email:$("#u").value.trim(),password:$("#pw").value});
   if(error){ err.textContent="Invalid credentials."; return; }
   if(!(await isAdmin())){ err.textContent="Unauthorized access is prohibited."; return; }
-  $("#pw").value=""; checkSession();
+  $("#pw").value="";
+  checkSession();
 };
 function buildDash(){
-  const d=$("#dash"); d.innerHTML='<h3 style="font-size:40px;margin:0">Editing Dashboard</h3><p style="font-size:16px">Changes appear on the public invitation after you save.</p>';
+  const d=$("#dash");
+  d.innerHTML='<h3 style="font-size:40px;margin:0">Editing Dashboard</h3><p style="font-size:16px">Changes appear on the public invitation after you save.</p>';
   FIELDS.forEach(([k,l,t])=>{
     if(!l){ d.insertAdjacentHTML("beforeend",`<h3>${k}</h3>`); return; }
     const v=get(C,k)||"", id="f_"+k.replace(".","_");
     if(t==="p") d.insertAdjacentHTML("beforeend",`<label>${l}</label><div class="thumb" id="t_${id}" style="background-image:${v?`url('${v}')`:"none"}"></div><input type="file" accept="image/*" data-up="${k}" style="color:#f6d58a;font-size:14px">`);
     else d.insertAdjacentHTML("beforeend",`<label>${l}</label>${t?`<textarea class="field" rows="4" id="${id}">`:`<input class="field" id="${id}" value="">`}${t?"</textarea>":""}`);
-    const el=$("#"+id); if(el) el.value=v;
+    const el=$("#"+id);
+    if(el) el.value=v;
   });
   d.insertAdjacentHTML("beforeend",'<div class="err" id="msg"></div><button class="btn" id="save">Save changes</button> <button class="btn" id="out" style="animation:none;font-size:16px">Logout</button>');
   $$("[data-up]").forEach(i=>i.onchange=async()=>{
-    const f=i.files[0]; if(!f) return; const msg=$("#msg"); msg.style.color="#f6d58a"; msg.textContent="Uploading…";
+    const f=i.files[0];
+    if(!f) return;
+    const msg=$("#msg");
+    msg.style.color="#f6d58a";
+    msg.textContent="Uploading…";
     const path=`${i.dataset.up.replace(".","_")}-${Date.now()}.${f.name.split(".").pop()}`;
     const {error}=await sb.storage.from("photos").upload(path,f,{upsert:true});
     if(error){ msg.style.color="#ff9d8a"; msg.textContent="Upload failed: "+error.message; return; }
     const url=sb.storage.from("photos").getPublicUrl(path).data.publicUrl;
-    set(C,i.dataset.up,url); $("#t_f_"+i.dataset.up.replace(".","_")).style.backgroundImage=`url('${url}')`; msg.textContent="Photo uploaded. Press Save changes.";
+    set(C,i.dataset.up,url);
+    $("#t_f_"+i.dataset.up.replace(".","_")).style.backgroundImage=`url('${url}')`;
+    msg.textContent="Photo uploaded. Press Save changes.";
   });
   $("#save").onclick=async()=>{
     FIELDS.forEach(([k,l,t])=>{ if(l&&t!=="p") set(C,k,$("#f_"+k.replace(".","_")).value); });
     const {error}=await sb.from("invitation").upsert({id:1,data:C,updated_at:new Date().toISOString()});
-    const m=$("#msg"); m.style.color=error?"#ff9d8a":"#9be29b"; m.textContent=error?"Could not save: "+error.message:"Saved! The public invitation is updated."; render();
+    const m=$("#msg");
+    m.style.color=error?"#ff9d8a":"#9be29b";
+    m.textContent=error?"Could not save: "+error.message:"Saved! The public invitation is updated.";
+    render();
   };
   $("#out").onclick=async()=>{ await sb.auth.signOut(); location.hash=""; };
 }
 
-load(); route();
+load();
+route();
 </script>
 </body>
 </html>
